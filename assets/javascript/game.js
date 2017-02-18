@@ -6,11 +6,9 @@ var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 var guesses = [];
 
 
-var randomLetter = Math.floor(Math.random() * 25);
-
-document.getElementById("guessWhich").textContent = guessCounter
-document.getElementById("wins").textContent = winCounter
-document.getElementById("losses").textContent = lossCounter
+var randomNum = Math.floor(Math.random() * 25);
+var randomLetter = letters[randomNum];
+console.log(randomLetter);
 
 document.onkeyup = function () {
 	guesses.push = event.key;
@@ -20,7 +18,7 @@ if (guesses[guesses.length] = randomLetter) {
 	winCounter++;
 }
 
-for (guessCounter = 9; i === 0; i--) {
+for (guessCounter = 9; guessCounter === 0; i--) {
 	if (i === 0) {
 		lossCounter++;
 		guessCounter = 9;
@@ -28,3 +26,6 @@ for (guessCounter = 9; i === 0; i--) {
 
 }
 
+document.getElementById("guessWhich").textContent = guessCounter
+document.getElementById("wins").textContent = winCounter
+document.getElementById("losses").textContent = lossCounter
